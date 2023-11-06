@@ -1,5 +1,7 @@
 <?php
 
+require "vendor/autoload.php";
+
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -11,7 +13,7 @@ include('./database.php');
 session_start();
 if (isset($_POST['submit_btn'])) {
 
-    $errors = array(); // Initialize an array to store error messages
+    $errors = array();
 
     $name = $_POST["name"];
     $email = $_POST["email"];
@@ -33,23 +35,34 @@ if (isset($_POST['submit_btn'])) {
 
     $mail = new PHPMailer(true);
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = $email;
+    $mail->Host = 'smtp.gmail.com';
+    $mail->Username = 'marah.abusaleh12@gmail.com';
     $mail->Password = 'duaobzorxqgasdgc';
     $mail->SMTPSecure = 'ssl';
-    $mail->Port = 587;
+    $mail->Port = 465;
 
-    $mail->setFrom($email);
-    $mail->addAddress($email);
+    try {
+        $mail->setFrom($email);
+        $mail->addAddress($email);
 
-    $mail->isHtml(true);
+        $mail->isHtml(true);
 
-    $mail->Subject = 'Confirmation';
-    $mail->Body    = "Your Message Sent Successfully, Our Team will contact to you as soon as possible";
+        $mail->Subject = 'Thank You For Contact Us!';
+        $mail->Body = '<html>
+                <body>
+                <h1 style="color:blue">Confirmation Email: Thank You For Contact Us!</h1>
+                    <h5>Your Message Sent Successfully, Our Team will contact you as soon as possible.</h5>
+                    <p>Email: <a href="mailto:hr@bluerayws.com">hr@bluerayws.com</a></p>
+                    <p>Phone: <a href="tel:+962798091253">+962 7 9809 1253</a></p>
+                </body>
+                </html>';
 
+        $mail->AltBody = 'Your Message Sent Successfully, Our Team will contact you as soon as possible.';
+    } catch (Exception $e) {
+        echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+    }
 
-    // Check if there are any errors
     if (empty($errors)) {
 
         $mail->send();

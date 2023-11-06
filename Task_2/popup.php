@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="assets/images/logo/logo3.png" type="image/x-icon">
     <style>
         .custom-confirm-button-class {
-            background-color: blue !important;
+            background-color: #1089ff !important;
             color: white !important;
         }
     </style>
