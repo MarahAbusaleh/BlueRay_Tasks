@@ -10,9 +10,6 @@ session_start();
     <meta charset="utf-8">
     <link rel="icon" href="images/logo.png" type="images/logo.jpeg">
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
@@ -76,7 +73,7 @@ session_start();
                             </div>
                             <div class="col-lg-5">
                                 <div class="contact-wrap w-100 p-md-5 p-4">
-                                    <h3 class="mb-4">Get in touch</h3>
+                                    <h3 class="mb-4">Get In Touch</h3>
                                     <form action="./contact.php" method="POST" id="contactForm" name="contactForm">
                                         <div class="row">
                                             <div class="col-md-12">
@@ -91,7 +88,7 @@ session_start();
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" value="<?php echo isset($_SESSION['form_data']['email']) ? $_SESSION['form_data']['email'] : ''; ?>">
+                                                    <input type="text" class="form-control" name="email" id="email" placeholder="Email" value="<?php echo isset($_SESSION['form_data']['email']) ? $_SESSION['form_data']['email'] : ''; ?>">
                                                     <?php
                                                     if (isset($_SESSION['form_errors']) && isset($_SESSION['form_errors']['email_error'])) {
                                                         echo '<div class="error-message" style="color:red">' . $_SESSION['form_errors']['email_error'] . '</div>';

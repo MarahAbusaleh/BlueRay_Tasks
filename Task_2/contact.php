@@ -25,6 +25,8 @@ if (isset($_POST['submit_btn'])) {
     }
     if (empty($email)) {
         $errors['email_error'] = 'Please enter the Email';
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors['email_error'] = 'Invalid email format';
     }
     if (empty($subject)) {
         $errors['subject_error'] = 'Please enter the Subject';
@@ -52,7 +54,7 @@ if (isset($_POST['submit_btn'])) {
         $mail->Body = '<html>
                 <body>
                 <h1 style="color:blue">Confirmation Email: Thank You For Contact Us!</h1>
-                    <h5>Your Message Sent Successfully, Our Team will contact you as soon as possible.</h5>
+                    <h3>Your Message Sent Successfully, Our Team will contact you as soon as possible.</h3>
                     <p>Email: <a href="mailto:hr@bluerayws.com">hr@bluerayws.com</a></p>
                     <p>Phone: <a href="tel:+962798091253">+962 7 9809 1253</a></p>
                 </body>
@@ -67,15 +69,21 @@ if (isset($_POST['submit_btn'])) {
 
         $mail->send();
 
-        $sql = "INSERT INTO contacts (name, email, subject, message) VALUES ('$name', '$email', '$subject', '$message')";
+        $sql = "INSERT INTO contacts (name, email, subject, message) VALUES (?, ?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssss", $name, $email, $subject, $message);
+        $stmt->execute();
 
-        if (mysqli_query($conn, $sql)) {
-            unset($_SESSION['form_errors']);
-            unset($_SESSION['form_data']);
-            header("Location: ./popup.php");
-            exit();
-        } else {
-            echo "Error: " . $stmt->error;
+        if ($stmt) {
+            $stmt->bind_param("ssss", $name, $email, $subject, $message);
+            if ($stmt->execute()) {
+                unset($_SESSION['form_errors']);
+                unset($_SESSION['form_data']);
+                header("Location: ./popup.php");
+                exit();
+            } else {
+                echo "Error: " . $stmt->error;
+            }
         }
     } else {
         $_SESSION['form_data'] = array(
