@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- site metas -->
+    <title>BlueRay Task_1</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- icon -->
+    <link rel="icon" href="images/logo.png" type="images/logo.jpeg">
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1460px;
+            }
+        }
+
+        .header_section {
+            width: 100%;
+            height: 800px;
+            float: left;
+            background-color: #242424;
+            background-image: url(./images/slider.jpg);
+            background-size: 78% 85%;
+            background-repeat: no-repeat;
+            background-position: 100% 0;
+
+        }
+
+        .logo {
+            width: 13%;
+            margin-top: 110px;
+            margin-left: 60px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navicon {
+            margin-top: 90px;
+            font-size: 100px;
+            color: white;
+        }
+
+        .btnn {
+            background: none;
+            border: none;
+        }
+
+        .btnn:active,
+        .btnn:focus {
+            outline: none !important;
+            border: none !important;
+        }
+
+        .navbar-toggler {
+            display: block !important;
+            border: none !important;
+        }
+
+        .navbar-toggler:active,
+        .navbar-toggler:focus {
+            border: none !important;
+        }
+
+        .custom-toggler {
+            display: block !important;
+        }
+
+        .custom-collapse {
+            display: block;
+            background-image: url(./images/nav.PNG);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            margin-left: 50px;
+        }
+
+        .logonav {
+            width: 11%;
+            margin-top: 110px;
+            margin-left: 40px;
+        }
+
+        .closeicon {
+            margin-right: 40px;
+
+        }
+
+        .navlist {
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        .navlist li:hover {
+            color: #f2c744;
+            cursor: default;
+        }
+
+        .social-icon {
+            display: inline;
+            margin-left: 70px;
+        }
+
+        .furniture_text {
+            width: 100%;
+            color: #fff;
+            font-weight: bold;
+            font-size: 100px;
+            text-transform: uppercase;
+            margin-top: 50px;
+            margin-left: 75px;
+        }
+
+        .there_text {
+            width: 40%;
+            font-size: 20px;
+            margin-left: 80px;
+
+            color: #fff;
+        }
+
+        .circle-container {
+            margin-left: 100px;
+            cursor: default;
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            background-color: gray;
+            border-radius: 50%;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .circle-container:hover .circle {
+            transform: translateX(80px);
+            background-color: #f2c744;
+        }
+
+        .text-container {
+            position: absolute;
+            top: -25px;
+            left: 30px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text {
+            display: inline-flex;
+            color: #fff;
+            border: none;
+            font-weight: bold;
+        }
+
+        #costum_slider a.carousel-control-prev {
+            left: 700px;
+        }
+
+        #costum_slider a.carousel-control-next {
+            right: 600px;
+        }
+
+        #costum_slider .carousel-control-prev,
+        #costum_slider .carousel-control-next {
+            top: 90%;
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: #fff;
+            opacity: 1;
+            border-radius: 100px;
+        }
+
+        #costum_slider .carousel-control-prev:hover,
+        #costum_slider .carousel-control-next:hover,
+        #costum_slider .carousel-control-prev:focus,
+        #costum_slider .carousel-control-next:focus {
+            background: #f2c744;
+        }
+
+        .material-symbols-outlined {
+            color: #000;
+            font-variation-settings:
+                'FILL' 1,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24,
+        }
+    </style>
+</head>
+
+<body style="overflow-y: hidden;">
+    <!-- header section start -->
+    <div class="header_section">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="logo"><a href="index.html"><img src="images/logoo.png"></a></div>
+                <button class="btnn navbar-toggler custom-toggler" type="button">
+                    <span class="navicon material-symbols-outlined" style="color: white;">
+                        clear_all
+                    </span>
+                </button>
+                <div class="custom-collapse container" id="fullPageDiv">
+                    <div class="row d-flex justify-content-between">
+                        <div class="logonav"><a href="index.html"><img src="images/logoo.png"></a></div>
+                        <div class="closeicon">
+                            <button class="btnn navbar-toggler custom-toggler-close" type="button">
+                                <span class="navicon material-symbols-outlined" style="color: white;">
+                                    close
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row navlist">
+                        <ul class="col-lg-4">
+                            <li class="nav-item"><a class="nav-link">HOME.</a></li>
+                            <li class="nav-item"><a class="nav-link">ABOUT.</a></li>
+                            <li class="nav-item"><a class="nav-link">OUR SERVICES.</a></li>
+                            <li class="nav-item"><a class="nav-link">TESTIMONIAL.</a></li>
+                        </ul>
+                        <ul class="col-lg-4">
+                            <li class="nav-item"><a class="nav-link">OUR CUSTOMER.</a></li>
+                            <li class="nav-item"><a class="nav-link">CONTACT US.</a></li>
+                        </ul>
+                        <ul class="col-lg-4">
+                            <li class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50"
+                                    height="50" viewBox="0,0,256,256">
+                                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <g transform="scale(8.53333,8.53333)">
+                                            <path
+                                                d="M28,6.937c-0.957,0.425 -1.985,0.711 -3.064,0.84c1.102,-0.66 1.947,-1.705 2.345,-2.951c-1.03,0.611 -2.172,1.055 -3.388,1.295c-0.973,-1.037 -2.359,-1.685 -3.893,-1.685c-2.946,0 -5.334,2.389 -5.334,5.334c0,0.418 0.048,0.826 0.138,1.215c-4.433,-0.222 -8.363,-2.346 -10.995,-5.574c-0.458,0.788 -0.721,1.704 -0.721,2.683c0,1.85 0.941,3.483 2.372,4.439c-0.874,-0.028 -1.697,-0.268 -2.416,-0.667c0,0.023 0,0.044 0,0.067c0,2.585 1.838,4.741 4.279,5.23c-0.447,0.122 -0.919,0.187 -1.406,0.187c-0.343,0 -0.678,-0.034 -1.003,-0.095c0.679,2.119 2.649,3.662 4.983,3.705c-1.825,1.431 -4.125,2.284 -6.625,2.284c-0.43,0 -0.855,-0.025 -1.273,-0.075c2.361,1.513 5.164,2.396 8.177,2.396c9.812,0 15.176,-8.128 15.176,-15.177c0,-0.231 -0.005,-0.461 -0.015,-0.69c1.043,-0.753 1.948,-1.692 2.663,-2.761z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg></li>
+                            <li class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50"
+                                    height="50" viewBox="0,0,256,256">
+                                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <g transform="scale(5.12,5.12)">
+                                            <path
+                                                d="M16,3c-7.16752,0 -13,5.83248 -13,13v18c0,7.16752 5.83248,13 13,13h18c7.16752,0 13,-5.83248 13,-13v-18c0,-7.16752 -5.83248,-13 -13,-13zM16,5h18c6.08648,0 11,4.91352 11,11v18c0,6.08648 -4.91352,11 -11,11h-18c-6.08648,0 -11,-4.91352 -11,-11v-18c0,-6.08648 4.91352,-11 11,-11zM37,11c-1.10457,0 -2,0.89543 -2,2c0,1.10457 0.89543,2 2,2c1.10457,0 2,-0.89543 2,-2c0,-1.10457 -0.89543,-2 -2,-2zM25,14c-6.06329,0 -11,4.93671 -11,11c0,6.06329 4.93671,11 11,11c6.06329,0 11,-4.93671 11,-11c0,-6.06329 -4.93671,-11 -11,-11zM25,16c4.98241,0 9,4.01759 9,9c0,4.98241 -4.01759,9 -9,9c-4.98241,0 -9,-4.01759 -9,-9c0,-4.98241 4.01759,-9 9,-9z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg></li>
+                            <li class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50"
+                                    height="50" viewBox="0,0,256,256">
+                                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <g transform="scale(10.66667,10.66667)">
+                                            <path
+                                                d="M17.525,9h-3.525v-2c0,-1.032 0.084,-1.682 1.563,-1.682h1.868v-3.18c-0.909,-0.094 -1.823,-0.14 -2.738,-0.138c-2.713,0 -4.693,1.657 -4.693,4.699v2.301h-3v4l3,-0.001v9.001h4v-9.003l3.066,-0.001z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- banner section start -->
+        <div class="layout_padding">
+            <div class="container">
+                <div id="costum_slider" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <h1 class="furniture_text">GROW & SCALE</h1>
+                            <p class="there_text">We provide comprehensive support for businesses looking to take their
+                                marketing & operations to the next level.</p>
+                            <div class="circle-container">
+                                <div class="circle"></div>
+                                <div class="text-container">
+                                    <div class="text">
+                                        ContactUs
+                                        <span class="material-symbols-outlined" style="color: white;">
+                                            arrow_outward
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+                            <h1 class="furniture_text">GROW & SCALE1</h1>
+                            <p class="there_text">We provide comprehensive support for businesses looking to take their
+                                marketing & operations to the next level.</p>
+                            <div class="circle-container">
+                                <div class="circle"></div>
+                                <div class="text-container">
+                                    <div class="text">
+                                        ContactUs
+                                        <span class="material-symbols-outlined" style="color: white;">
+                                            arrow_outward
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <h1 class="furniture_text">GROW & SCALE2</h1>
+                            <p class="there_text">We provide comprehensive support for businesses looking to take their
+                                marketing & operations to the next level.</p>
+                            <div class="circle-container">
+                                <div class="circle"></div>
+                                <div class="text-container">
+                                    <div class="text">
+                                        ContactUs
+                                        <span class="material-symbols-outlined" style="color: white;">
+                                            arrow_outward
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="carousel-control-prev" href="#costum_slider" role="button" data-slide="prev">
+                        <span class="material-symbols-outlined">
+                            arrow_back
+                        </span>
+                    </a>
+                    <a class="carousel-control-next" href="#costum_slider" role="button" data-slide="next">
+                        <span class="material-symbols-outlined">
+                            arrow_right_alt
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- banner section end -->
+    </div>
+    <!-- header section end -->
+    <script>
+        $(document).ready(function () {
+            $('#costum_slider').carousel();
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var customTogglerClose = document.querySelector(".custom-toggler-close");
+            var customToggler = document.querySelector(".custom-toggler");
+            var customCollapse = document.querySelector(".custom-collapse");
+            var navicon = customToggler.querySelector(".navicon");
+            var isXIcon = false;
+
+            customTogglerClose.addEventListener("click", function () {
+                customCollapse.style.display = "none";
+            });
+
+            customToggler.addEventListener("click", function () {
+                if (isXIcon) {
+                    customCollapse.style.display = "none";
+                } else {
+                    customCollapse.style.display = "block";
+                }
+
+                isXIcon = !isXIcon;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -51,7 +51,8 @@ if (isset($_POST['submit_btn'])) {
         $mail->isHtml(true);
 
         $mail->Subject = 'Thank You For Contact Us!';
-        $mail->Body = '<html>
+        $mail->Body =
+            '<html>
                 <body>
                 <h1 style="color:blue">Confirmation Email: Thank You For Contact Us!</h1>
                     <h3>Your Message Sent Successfully, Our Team will contact you as soon as possible.</h3>
