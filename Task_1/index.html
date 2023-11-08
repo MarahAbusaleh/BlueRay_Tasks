@@ -27,207 +27,11 @@
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <style>
-        @media (min-width: 1200px) {
-            .container {
-                max-width: 1460px;
-            }
-        }
-
-        .header_section {
-            width: 100%;
-            height: 800px;
-            float: left;
-            background-color: #242424;
-            background-image: url(./images/slider.jpg);
-            background-size: 78% 85%;
-            background-repeat: no-repeat;
-            background-position: 100% 0;
-
-        }
-
-        .logo {
-            width: 13%;
-            margin-top: 110px;
-            margin-left: 60px;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .navicon {
-            margin-top: 90px;
-            font-size: 100px;
-            color: white;
-        }
-
-        .btnn {
-            background: none;
-            border: none;
-        }
-
-        .btnn:active,
-        .btnn:focus {
-            outline: none !important;
-            border: none !important;
-        }
-
-        .navbar-toggler {
-            display: block !important;
-            border: none !important;
-        }
-
-        .navbar-toggler:active,
-        .navbar-toggler:focus {
-            border: none !important;
-        }
-
-        .custom-toggler {
-            display: block !important;
-        }
-
-        .custom-collapse {
-            display: block;
-            background-image: url(./images/nav.PNG);
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 999;
-            margin-left: 50px;
-        }
-
-        .logonav {
-            width: 11%;
-            margin-top: 110px;
-            margin-left: 40px;
-        }
-
-        .closeicon {
-            margin-right: 40px;
-
-        }
-
-        .navlist {
-            color: #fff;
-            font-size: 40px;
-            font-weight: bold;
-            width: 100%;
-        }
-
-        .navlist li:hover {
-            color: #f2c744;
-            cursor: default;
-        }
-
-        .social-icon {
-            display: inline;
-            margin-left: 70px;
-        }
-
-        .furniture_text {
-            width: 100%;
-            color: #fff;
-            font-weight: bold;
-            font-size: 100px;
-            text-transform: uppercase;
-            margin-top: 50px;
-            margin-left: 75px;
-        }
-
-        .there_text {
-            width: 40%;
-            font-size: 20px;
-            margin-left: 80px;
-
-            color: #fff;
-        }
-
-        .circle-container {
-            margin-left: 100px;
-            cursor: default;
-            position: relative;
-            width: 100px;
-            height: 100px;
-        }
-
-        .circle {
-            width: 50px;
-            height: 50px;
-            background-color: gray;
-            border-radius: 50%;
-            transition: transform 0.3s, background-color 0.3s;
-        }
-
-        .circle-container:hover .circle {
-            transform: translateX(80px);
-            background-color: #f2c744;
-        }
-
-        .text-container {
-            position: absolute;
-            top: -25px;
-            left: 30px;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .text {
-            display: inline-flex;
-            color: #fff;
-            border: none;
-            font-weight: bold;
-        }
-
-        #costum_slider a.carousel-control-prev {
-            left: 700px;
-        }
-
-        #costum_slider a.carousel-control-next {
-            right: 600px;
-        }
-
-        #costum_slider .carousel-control-prev,
-        #costum_slider .carousel-control-next {
-            top: 90%;
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            background: #fff;
-            opacity: 1;
-            border-radius: 100px;
-        }
-
-        #costum_slider .carousel-control-prev:hover,
-        #costum_slider .carousel-control-next:hover,
-        #costum_slider .carousel-control-prev:focus,
-        #costum_slider .carousel-control-next:focus {
-            background: #f2c744;
-        }
-
-        .material-symbols-outlined {
-            color: #000;
-            font-variation-settings:
-                'FILL' 1,
-                'wght' 400,
-                'GRAD' 0,
-                'opsz' 24,
-        }
-    </style>
 </head>
 
-<body style="overflow-y: hidden;">
+<body>
     <!-- header section start -->
-    <div class="header_section">
+    <div class="header_section" id="home">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="logo"><a href="index.html"><img src="images/logoo.png"></a></div>
@@ -249,16 +53,16 @@
                     </div>
                     <br>
                     <br>
-                    <div class="row navlist">
+                    <div class="row navlist" style="color: white;">
                         <ul class="col-lg-4">
-                            <li class="nav-item"><a class="nav-link">HOME.</a></li>
-                            <li class="nav-item"><a class="nav-link">ABOUT.</a></li>
-                            <li class="nav-item"><a class="nav-link">OUR SERVICES.</a></li>
-                            <li class="nav-item"><a class="nav-link">TESTIMONIAL.</a></li>
+                            <li class="nav-item"><a href="#home" class="nav-link">HOME.</a></li>
+                            <li class="nav-item"><a href="#aboutUs" class="nav-link">ABOUT.</a></li>
+                            <li class="nav-item"><a href="#services" class="nav-link">OUR SERVICES.</a></li>
+                            <li class="nav-item"><a href="#testimonials" class="nav-link">TESTIMONIAL.</a></li>
                         </ul>
                         <ul class="col-lg-4">
-                            <li class="nav-item"><a class="nav-link">OUR CUSTOMER.</a></li>
-                            <li class="nav-item"><a class="nav-link">CONTACT US.</a></li>
+                            <li class="nav-item"><a href="#customers" class="nav-link">OUR CUSTOMER.</a></li>
+                            <li class="nav-item"><a href="#contactUs" class="nav-link">CONTACT US.</a></li>
                         </ul>
                         <ul class="col-lg-4">
                             <li class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50"
@@ -310,9 +114,14 @@
         <div class="layout_padding">
             <div class="container">
                 <div id="costum_slider" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#costum_slider" data-slide-to="0" class="active"></li>
+                        <li data-target="#costum_slider" data-slide-to="1"></li>
+                        <li data-target="#costum_slider" data-slide-to="2"></li>
+                    </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <h1 class="furniture_text">GROW & SCALE</h1>
+                            <h1 class="furniture_text">GROW & SCALE0</h1>
                             <p class="there_text">We provide comprehensive support for businesses looking to take their
                                 marketing & operations to the next level.</p>
                             <div class="circle-container">
@@ -378,6 +187,388 @@
         <!-- banner section end -->
     </div>
     <!-- header section end -->
+
+    <!-- our services section start -->
+    <section id="services">
+        <div class="row d-flex justify-content-between">
+            <div>
+                <h6>FEATURED SERVICES</h6>
+                <h2>Our Services</h2>
+            </div>
+            <p class="ptext">
+                We provide comprehensive support for businesses looking to take their
+                marketing & operations to the next level.
+            </p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card card-no-bg">
+                        <div class="card-body">
+                            <img src="./images/card1.png" />
+                            <h5 class="card-title">Website and Mobile Development</h5>
+                            <p class="card-text">Website and Mobile development including Ecommerce with shopify, custom
+                                solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card card-no-bg">
+                        <div class="card-body">
+                            <img src="./images/card2.png" />
+                            <h5 class="card-title">Digital Marketing</h5>
+                            <p class="card-text">[Social media management, Ads, influencers, content, SEO]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card card-no-bg">
+                        <div class="card-body">
+                            <img src="./images/card2.png" />
+                            <h5 class="card-title">Operation Management</h5>
+                            <p class="card-text">[Warehousing Solutions, Logistics, fulfilment services, Procurement ]
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card card-no-bg">
+                        <div class="card-body">
+                            <img src="./images/card2.png" />
+                            <h5 class="card-title">Growth & Scale Services</h5>
+                            <p class="card-text">[ Strategy, fractional executive team, Advisory services, funding]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- our services section end -->
+
+    <!-- testimonial section start -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div>
+                <div>
+                    <div>
+                        <div class="row d-flex justify-content-between">
+                            <div>
+                                <h6>WHAT PEOPLE SAYS</h6>
+                                <h2>TESTIMONIALS</h2>
+                            </div>
+                            <p class="ptext">
+                                We provide comprehensive support for businesses looking to take their
+                                marketing & operations to the next level.
+                            </p>
+                        </div>
+                        <div>
+                            <div>
+                                <div class="des">
+                                    <div class="tes-cont tes-cont-left">
+                                        <span>
+                                            <div class="tes-cont tes-cont-no">
+                                            </div>
+                                            <div class="tes-cont tes-cont-image-1">
+                                                <div class="field-content"> <img src="./images/tes.png" width="555"
+                                                        height="555" alt="" />
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="tes-cont tes-cont-comment"><span class="field-content">
+
+                                            <div class="tes-cont tes-cont-body">
+                                                <div class="field-content">
+                                                    <p>
+                                                        I'm so grateful to AKA Digital and Business Solutions for
+                                                        helping my business
+                                                        grow! They have always provided excellent service and have been
+                                                        there to answer all of my questions. I am very pleased with the
+                                                        results and I would highly recommend them to anyone looking for
+                                                        Digital Marketing services in Canada
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="row tes-cont tes-cont-right">
+                                                <div class="tes-cont tes-cont-field-person-image">
+                                                    <div class="field-content"> <img src="./images/tes.png" width="552"
+                                                            height="552" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="tes-cont tes-cont-name"><span class="field-content">Amr
+                                                            Darawsheh</span></div>
+                                                    <div class="tes-cont tes-cont-des">
+                                                        <div class="field-content">ART DIRECTOR
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- testimonial section end -->
+
+    <!-- about us section start -->
+    <section class="aboutUs about-animate" id="aboutUs">
+        <div class="container">
+            <div class="views-element-container" id="about-us-div">
+                <div>
+                    <div>
+                        <div class="views-row">
+                            <div class="about-cont about-cont-left"><span class="field-content">
+                                    <div class="row d-flex justify-content-between">
+                                        <div>
+                                            <h6>About Us</h6>
+                                            <h2 class="about-cont about-cont-title">1STOP VENTURE</h2>
+                                        </div>
+                                    </div>
+                                    <div class="about-cont about-cont-body">
+                                        <div class="field-content">
+                                            <p style="margin: 0px;">
+                                                Our team of experienced professionals are always
+                                                available to offer expert advice and support to ensure that our clients
+                                                get the most
+                                                out of their digital marketing campaigns. With our help, businesses can
+                                                reach their target audience and drive sales with the help of effective
+                                                digital marketing strategies.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </span></div>
+                            <div class="about-cont about-cont-right">
+                                <span>
+                                    <div class="about-cont about-cont-field-about-image">
+                                        <div class="field-content"> <img src="./images/about.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="about-cont about-cont-1v"><span class="field-content">1V</span>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about us section end -->
+
+    <!-- our client section start -->
+    <section class="customers client-animate" id="customers">
+        <div class="container">
+            <div id="customers-div">
+                <div>
+                    <div>
+                        <div class="row d-flex justify-content-between">
+                            <div>
+                                <h6>OUR HAPPY CLIENTS</h6>
+                                <h2>OUR CUSTOMERS</h2>
+                            </div>
+                            <p class="ptext">
+                                We provide comprehensive support for businesses looking to take their
+                                marketing & operations to the next level.
+                            </p>
+                        </div>
+                        <div class="item-list">
+                            <ul class="row">
+                                <li>
+                                    <div>
+                                        <div> <img src="./images/p2.png" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div> <img src="./images/p1.png" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div> <img src="./images/p2.png" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div> <img src="./images/p1.png" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- our client section end -->
+
+    <!-- contact us section start -->
+    <section class="contactUs container" id="contactUs" style="margin-left: 110px; margin-right: 110px;">
+        <div class="container">
+            <div id="contact-us-div">
+                <div>
+                    <div class="">
+                        <div style="margin-right: 200px">
+                            <div class="contact-cont contact-cont-body">
+                                <div class="field-content">
+                                    <p><iframe style="border:0;"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1446.192121393692!2d-79.7267860506356!3d43.536031700154915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b426cf936bb7b%3A0xc7aff5a03d0cbaf!2s3545%20Odyssey%20Dr%20%2316%2C%20Mississauga%2C%20ON%20L5M%207N4!5e0!3m2!1sen!2sca!4v1690303405406!5m2!1sen!2sca"></iframe>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class=" col-lg-4 contact-cont-left">
+                                    <span>
+                                        <div class="row d-flex justify-content-between">
+                                            <div>
+                                                <h6>GET IN TOUCH</h6>
+                                                <h2>LET&#039;S MAKE YOUR<br> BRAND BRILLIANT!</h2>
+                                            </div>
+                                            <p class="field-content">
+                                                If you would like to work with us or just want to
+                                                get in touch, we’d love to hear from you!
+                                            </p>
+                                        </div>
+                                        <div class="contact-cont contact-cont-field-phone-number">
+                                            <div class="field-content"><a href="tel:0016045225685">+1 604 522 5685</a>
+                                            </div>
+                                        </div>
+                                        <ul class="col-lg-5">
+                                            <li class="social-icon2"><svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                                                    y="0px" width="30" height="30" viewBox="0,0,256,256">
+                                                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                                        stroke-linecap="butt" stroke-linejoin="miter"
+                                                        stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                                        font-family="none" font-weight="none" font-size="none"
+                                                        text-anchor="none" style="mix-blend-mode: normal">
+                                                        <g transform="scale(8.53333,8.53333)">
+                                                            <path
+                                                                d="M28,6.937c-0.957,0.425 -1.985,0.711 -3.064,0.84c1.102,-0.66 1.947,-1.705 2.345,-2.951c-1.03,0.611 -2.172,1.055 -3.388,1.295c-0.973,-1.037 -2.359,-1.685 -3.893,-1.685c-2.946,0 -5.334,2.389 -5.334,5.334c0,0.418 0.048,0.826 0.138,1.215c-4.433,-0.222 -8.363,-2.346 -10.995,-5.574c-0.458,0.788 -0.721,1.704 -0.721,2.683c0,1.85 0.941,3.483 2.372,4.439c-0.874,-0.028 -1.697,-0.268 -2.416,-0.667c0,0.023 0,0.044 0,0.067c0,2.585 1.838,4.741 4.279,5.23c-0.447,0.122 -0.919,0.187 -1.406,0.187c-0.343,0 -0.678,-0.034 -1.003,-0.095c0.679,2.119 2.649,3.662 4.983,3.705c-1.825,1.431 -4.125,2.284 -6.625,2.284c-0.43,0 -0.855,-0.025 -1.273,-0.075c2.361,1.513 5.164,2.396 8.177,2.396c9.812,0 15.176,-8.128 15.176,-15.177c0,-0.231 -0.005,-0.461 -0.015,-0.69c1.043,-0.753 1.948,-1.692 2.663,-2.761z">
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                </svg></li>
+                                            <li class="social-icon2"><svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                                                    y="0px" width="30" height="30" viewBox="0,0,256,256">
+                                                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                                        stroke-linecap="butt" stroke-linejoin="miter"
+                                                        stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                                        font-family="none" font-weight="none" font-size="none"
+                                                        text-anchor="none" style="mix-blend-mode: normal">
+                                                        <g transform="scale(5.12,5.12)">
+                                                            <path
+                                                                d="M16,3c-7.16752,0 -13,5.83248 -13,13v18c0,7.16752 5.83248,13 13,13h18c7.16752,0 13,-5.83248 13,-13v-18c0,-7.16752 -5.83248,-13 -13,-13zM16,5h18c6.08648,0 11,4.91352 11,11v18c0,6.08648 -4.91352,11 -11,11h-18c-6.08648,0 -11,-4.91352 -11,-11v-18c0,-6.08648 4.91352,-11 11,-11zM37,11c-1.10457,0 -2,0.89543 -2,2c0,1.10457 0.89543,2 2,2c1.10457,0 2,-0.89543 2,-2c0,-1.10457 -0.89543,-2 -2,-2zM25,14c-6.06329,0 -11,4.93671 -11,11c0,6.06329 4.93671,11 11,11c6.06329,0 11,-4.93671 11,-11c0,-6.06329 -4.93671,-11 -11,-11zM25,16c4.98241,0 9,4.01759 9,9c0,4.98241 -4.01759,9 -9,9c-4.98241,0 -9,-4.01759 -9,-9c0,-4.98241 4.01759,-9 9,-9z">
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                </svg></li>
+                                            <li class="social-icon2"><svg xmlns="http://www.w3.org/2000/svg" x="0px"
+                                                    y="0px" width="30" height="30" viewBox="0,0,256,256">
+                                                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                                        stroke-linecap="butt" stroke-linejoin="miter"
+                                                        stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                                        font-family="none" font-weight="none" font-size="none"
+                                                        text-anchor="none" style="mix-blend-mode: normal">
+                                                        <g transform="scale(10.66667,10.66667)">
+                                                            <path
+                                                                d="M17.525,9h-3.525v-2c0,-1.032 0.084,-1.682 1.563,-1.682h1.868v-3.18c-0.909,-0.094 -1.823,-0.14 -2.738,-0.138c-2.713,0 -4.693,1.657 -4.693,4.699v2.301h-3v4l3,-0.001v9.001h4v-9.003l3.066,-0.001z">
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                </svg></li>
+                                        </ul>
+                                    </span>
+                                </div>
+                                <div class=" col-lg-8 contact-cont contact-cont-field-contact-form">
+                                    <div class="field-content">
+                                        <form style="margin-right: 220px;" action="" method="post">
+                                            <div class="form-item">
+                                                <label for="name">Name</label>
+                                                <input type="text" id="name" name="name" class="form-text " />
+                                            </div>
+                                            <div class="form-item">
+                                                <label for="email">Email</label>
+                                                <input type="email" id="email" name="email" class="form-email" />
+                                            </div>
+                                            <div class="form-item form-type-textarea">
+                                                <label for="message">Your
+                                                    Message</label>
+                                                <div>
+                                                    <textarea id="message" name="message" rows="5" cols="60"
+                                                        class="form-textarea"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions" id="actions">
+                                                <input class="form-submit form-submit" type="submit" value="SEND" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- contact us section end -->
+
+    <!-- footer section start -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer_logo">
+                    <div id="block-sitebranding-2">
+                        <a href="index.html" rel="home">
+                            <img src="./images/logoo.png" alt="Home" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8 footer_menu">
+                    <nav role="navigation" aria-labelledby="block-mainmenu-2-menu" id="block-mainmenu-2">
+                        <ul>
+                            <li>
+                                <a href="#home">HOME</a>
+                            </li>
+                            <li>
+                                <a href="#aboutUs">ABOUT</a>
+                            </li>
+                            <li>
+                                <a href="#services">OUR SERVICES</a>
+                            </li>
+                            <li>
+                                <a href="#testimonials">TESTIMONIALS</a>
+                            </li>
+                            <li>
+                                <a href="#customers">OUR CUSTOMERS</a>
+                            </li>
+                            <li>
+                                <a href="#contactUs">CONTACT US</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="block-copyright">
+                        <div>
+                            <p>Developed and Designed by <a href="https://bluerayws.com/" target="_blank">Blue Ray for
+                                    Web Solutions</a>. All rights reserved 2023©</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end -->
     <script>
         $(document).ready(function () {
             $('#costum_slider').carousel();
@@ -388,6 +579,7 @@
             var customTogglerClose = document.querySelector(".custom-toggler-close");
             var customToggler = document.querySelector(".custom-toggler");
             var customCollapse = document.querySelector(".custom-collapse");
+            customCollapse.style.display = "none";
             var navicon = customToggler.querySelector(".navicon");
             var isXIcon = false;
 
